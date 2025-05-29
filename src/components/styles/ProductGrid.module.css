@@ -1,0 +1,79 @@
+.product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-left: 15px;
+    padding: 0 40px 160px;
+}
+
+.product img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+a .iphone {
+    width: 76%;
+    margin-bottom: 10px;
+}
+
+a .macbook {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+a .airpods {
+    width: 75%;
+    margin-top: 11px;
+    margin-bottom: 20px;
+}
+
+a .watch {
+    width: 76%;
+    margin-top: 32px;
+    margin-bottom: 29px;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 430px) {
+    .product {
+        padding: 0px 50px 25px;
+    }
+
+    a .iphone {
+        width: 85%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        margin-left: 15px;
+    }
+
+    a .macbook {
+        width: 99%;
+    }
+
+    a .airpods {
+        width: 85%;
+        margin-left: 15px;
+    }
+
+    a .watch {
+        width: 75%;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+}
