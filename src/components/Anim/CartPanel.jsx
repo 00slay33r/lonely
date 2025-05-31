@@ -12,12 +12,22 @@ export default function CartPanel({ open, onClose }) {
         <i className="fa-solid fa-xmark" onClick={onClose}></i>
       </div>
       <div className="cart">
-        {cart.length === 0 ? <div>Cart is empty</div> : cart.map((item, idx) => (
+        {cart.length === 0 ? (
+          <div className="emptyCart">
+            <h2 className="emptyTitle">YOUR CART IS EMPTY</h2>
+            <p className="emptySubtitle">TIME TO FILL UP THE CART</p>
+            <div className="emptyButton">
+              <button onClick={onClose}>
+              CONTINUE SHOPPING
+              </button>
+            </div>
+          </div>
+        ) : cart.map((item, idx) => (
           <div className="cart-item" key={idx}>
-            <img src={item.image} alt={item.name} className="cart-item-image" />
+            <img src={item.image} alt={item.name}/>
             <div className="details">
               <div className="title">{item.name}</div>
-              <div className="shipping">SHIPS BY: {item.shippingDate}</div>
+              <div className="shipping">SHIPS BY: 1 September, 2025</div>
             </div>
             <div className="quantity">
               <button onClick={() => updateQuantity(idx, -1)}>-</button>

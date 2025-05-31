@@ -177,11 +177,11 @@ header nav button:hover {
     font-size: 20px;
 }
 
-#subtotal-label {
+.subtotal-label {
     text-align: left;
 }
 
-#subtotal-amount {
+.subtotal-amount {
     text-align: right;
 }
 
@@ -190,6 +190,122 @@ header nav button:hover {
     margin-top: 10px;
     font-size: 14px;
     font-weight: 400;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 7rem;
+    border: 1px solid white;
+    margin-bottom: 10px;
+    background: black;
+}
+
+.cart-item .title {
+    font-weight: 700;
+}
+
+.cart-item img {
+    width: auto;
+    height: 75px;
+    margin-right: 10px;
+}
+
+.cart-item .details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.cart .shipping {
+    font-size: 13px;
+    font-weight: 500;
+    color: #929292;
+}
+
+.cart-item .row-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.cart-item .quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    margin: 0 5px;
+}
+
+.cart-item .quantity button {
+    background-color: black;
+    color: white;
+    padding: 3px 10px;
+    margin-bottom: 11px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cart-item .remove {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 20px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.cart-item .price {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 60px;
+    text-align: right;
+}
+
+.emptyCart {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.emptySubtitle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.emptyButton button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    width: 50%;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.emptyButton button:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
 }
 
 .cart-header,
